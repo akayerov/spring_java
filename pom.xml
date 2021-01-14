@@ -79,22 +79,28 @@
 			<artifactId>spring-data-jdbc</artifactId>
 			<version>2.1.2</version>
 		</dependency>
-	</dependencies>
-	<repositories>
-		<repository>
-			<id>spring-milestone</id>
-			<name>Spring Maven MILESTONE Repository</name>
-			<url>https://repo.spring.io/libs-milestone</url>
-		</repository>
-	</repositories>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+        <!-- Liquibase -->
+        <dependency>
+                    <groupId>org.liquibase</groupId>
+                    <artifactId>liquibase-core</artifactId>
+                    <version>3.3.3</version>
+                </dependency>
+        </dependencies>
+        <repositories>
+            <repository>
+                <id>spring-milestone</id>
+                <name>Spring Maven MILESTONE Repository</name>
+                <url>https://repo.spring.io/libs-milestone</url>
+            </repository>
+        </repositories>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </build>
 
 
-</project>
+        </project>

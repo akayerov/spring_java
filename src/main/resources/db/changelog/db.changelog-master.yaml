@@ -1,0 +1,61 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: andrey_kayerov
+      changes:
+        - createTable:
+            tableName: person2
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: marceloverdijk
+      changes:
+          - insert:
+              tableName: person2
+              columns:
+                - column:
+                    name: first_name
+                    value: Marcel
+                - column:
+                    name: last_name
+                    value: Ivanov
+  - changeSet:
+      id: 3
+      author: andrey
+      sqlFile:
+        dbms: postgresql
+        path: sql/update.sql
+        relativeToChangelogFile: true
+  - changeSet:
+      id: 4
+      author: andrey:comments here
+      comment: Update_field_name
+      sqlFile:
+        dbms: postgresql
+        path: sql/update.sql
+        relativeToChangelogFile: true
+  - changeSet:
+      id: 5
+      author: andrey k
+      comment: Добавление значения
+      sqlFile:
+        dbms: postgresql
+        path: sql/2021-01-14_14_01_insert_data_person2.sql
+        relativeToChangelogFile: true

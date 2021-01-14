@@ -1,0 +1,1 @@
+update person2 set last_name = 'Петров' where id=1;

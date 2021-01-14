@@ -1,0 +1,1 @@
+insert into  person2 ( first_name, last_name) values ('Андрей', 'Кайеров');
